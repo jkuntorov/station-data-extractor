@@ -1,7 +1,7 @@
 require 'json'
 
-journeys_json = JSON.parse(File.read("export/stations.json"))
-locations_json = JSON.parse(File.read("export/loc.json"))
+journeys_json = JSON.parse(File.read("export/journeys.json"))
+locations_json = JSON.parse(File.read("export/locations.json"))
 
 journeys = []
 locations = []

@@ -1,7 +1,4 @@
 JOURNEYS
-Acton Central
-Acton Main Line
-Acton Town
 Aldgate
 Aldgate East
 All Saints
@@ -13,22 +10,18 @@ Arnos Grove
 Arsenal
 Baker Street
 Balham
-Balham NR
 Bank
 Barbican
 Barking
 Barkingside
 Barons Court
-Battersea Park
 Bayswater
 Beckton
 Beckton Park
 Becontree
-Bellingham
 Belsize Park
 Bermondsey
 Bethnal Green
-Bethnal Green NR
 Blackfriars
 Blackhorse Road
 Blackwall
@@ -41,27 +34,15 @@ Bow Road
 Brent Cross
 Brixton
 Bromley By Bow
-Brondesbury
-Brondesbury Park
 Buckhurst Hill
 Burnt Oak
-Bushey
-Caledonian Rd&B'sby
 Caledonian Road
-Cambridge Heath
-Camden Road
 Camden Town
 Canada Water
 Canary Wharf
-Canary Wharf DLR
-Canary Wharf E2
 Canning Town
 Cannon Street
-Canonbury
 Canons Park
-Carpenders Park
-Carshalton
-Castle Bar Park
 Chalfont & Latimer
 Chalk Farm
 Chancery Lane
@@ -70,37 +51,28 @@ Chesham
 Chigwell
 Chiswick Park
 Chorleywood
-City Thameslink
 Clapham Common
-Clapham Junction
 Clapham North
 Clapham South
-Clapton
 Cockfosters
 Colindale
 Colliers Wood
 Covent Garden
 Crossharbour
-Crouch Hill
 Croxley
 Custom House DLR
 Cutty Sark
 Cyprus
-Dagenham Dock
 Dagenham East
 Dagenham Heathway
-Dalston Kingsland
 Debden
 Deptford Bridge
 Devons Road
 Dollis Hill
-Drayton Green
-Drayton Pk
 Ealing Broadway
 Ealing Common
 Earls Court
 East Acton
-East Croydon
 East Finchley
 East Ham
 East India
@@ -114,16 +86,11 @@ Elm Park
 Elverson Road
 Embankment
 Epping
-Essex Road
 Euston
-Euston NR
 Euston Square
-FENCHURCH ST NR
 Fairlop
 Farringdon
-Fenchurch St NR
 Finchley Central
-Finchley Rd & Frognal
 Finchley Road
 Finsbury Park
 Fulham Broadway
@@ -133,29 +100,20 @@ Gloucester Road
 Golders Green
 Goldhawk Road
 Goodge Street
-Gospel Oak
 Grange Hill
 Great Portland St
 Green Park
 Greenford
 Greenwich DLR
 Gunnersbury
-Hackney Central
-Hackney Downs
-Hackney Wick
 Hainault
 Hammersmith D
 Hammersmith M
 Hampstead
-Hampstead Heath
 Hanger Lane
-Hanwell
 Harlesden
-Harringay
-Harringay Green Las
 Harrow On The Hill
 Harrow Wealdstone
-Hatch End
 Hatton Cross
 Hayes & Harlington
 Headstone Lane
@@ -172,59 +130,43 @@ Hillingdon
 Holborn
 Holland Park
 Holloway Road
-Homerton
 Hornchurch
 Hounslow Central
 Hounslow East
 Hounslow West
 Hyde Park Corner
 Ickenham
-Ilford
-Imperial Wharf
 Island Gardens
 Kennington
 Kensal Green
-Kensal Rise
 Kensington Olympia
 Kentish Town
-Kentish Town West
 Kenton
 Kew Gardens
 Kilburn
-Kilburn High Road
 Kilburn Park
 King George V
 Kings Cross
-Kings Cross M
-Kings Cross T
 Kingsbury
 Knightsbridge
 Ladbroke Grove
 Lambeth North
 Lancaster Gate
-Langdon Park
 Latimer Road
 Leicester Square
 Lewisham DLR
 Leyton
-Leyton Midland Road
 Leytonstone
-Leytonstone High Rd
 Limehouse DLR
-Limehouse NR
-Liverpool St NR
-Liverpool St WAGN TOC Gates
 Liverpool Street
 London Bridge
 London City Airport
-London Fields
 Loughton
 Maida Vale
 Manor House
 Mansion House
 Marble Arch
 Marylebone
-Marylebone NR
 Mile End
 Mill Hill East
 Monument
@@ -235,7 +177,6 @@ Mornington Crescent
 Mudchute
 Neasden
 Newbury Park
-Norbury
 North Acton
 North Ealing
 North Greenwich
@@ -244,11 +185,8 @@ North Wembley
 Northfields
 Northolt
 Northolt Park
-Northwick Park
 Northwood
 Northwood Hills
-Norwood Junction SR
-Not Applicable
 Notting Hill Gate
 Oakwood
 Old Street
@@ -256,10 +194,8 @@ Osterley
 Oval
 Oxford Circus
 Paddington
-Paddington FGW
 Park Royal
 Parsons Green
-Peckham Rye
 Perivale
 Piccadilly Circus
 Pimlico
@@ -270,15 +206,12 @@ Poplar
 Preston Road
 Prince Regent
 Pudding Mill Lane
-Purley
 Putney Bridge
 Queens Park
 Queensbury
 Queensway
-Rainham Essex
 Ravenscourt Park
 Rayners Lane
-Rectory Road
 Redbridge
 Regents Park
 Richmond
@@ -295,51 +228,34 @@ Russell Square
 Seven Sisters
 Shadwell DLR
 Shepherd's Bush Mkt
-Shepherd's Bush NR
 Shepherd's Bush Und
 Sloane Square
 Snaresbrook
-South Acton
 South Ealing
-South Greenford
-South Hampstead
 South Harrow
 South Kensington
 South Kenton
 South Quay
 South Ruislip
-South Tottenham
 South Wimbledon
 South Woodford
-Southall
 Southfields
 Southgate
 Southwark
-St James Street
 St James's Park
 St Johns Wood
-St Pancras International
 St Pauls
 Stamford Brook
-Stamford Hill
 Stanmore
 Stepney Green
 Stockwell
-Stoke Newington
 Stonebridge Park
 Stratford
-Streatham
-Streatham Common
 Sudbury Hill
-Sudbury Hill Harrow
 Sudbury Town
-Sudbury&Harrow Rd
-Sutton Surrey
 Swiss Cottage
-Sydenham SR
 Temple
 Theydon Bois
-Thornton Heath
 Tooting Bec
 Tooting Broadway
 Tottenham Court Rd
@@ -348,45 +264,31 @@ Totteridge
 Tower Gateway
 Tower Hill
 Tufnell Park
-Tulse Hill
 Turnham Green
 Turnpike Lane
 Upminster
 Upminster Bridge
 Upney
-Upper Holloway
 Upton Park
 Uxbridge
 Vauxhall
 Victoria
-WIMBLEDON TRAM                
 Walthamstow Central
-Walthamstow Qns R
 Wanstead
-Wanstead Park
 Warren Street
 Warwick Avenue
 Waterloo
-Waterloo JLE
 Watford High Street
-Watford Junction
-Watford Met
 Wembley Central
 Wembley Park
-Wembley Stadium
 West Acton
 West Brompton
-West Drayton
-West Ealing
 West Finchley
 West Ham
-West Hampst'd NL
-West Hampst'd Tlink
 West Hampstead
 West Harrow
 West India Quay
 West Kensington
-West Norwood
 West Ruislip
 West Silvertown
 Westbourne Park
@@ -401,7 +303,6 @@ Wimbledon Park
 Wood Green
 Wood Lane
 Woodford
-Woodgrange Park
 Woodside Park
 Woolwich Arsenal DLR
 
@@ -524,6 +425,7 @@ Harrow & Wealdstone Station
 Harrow on the Hill Station
 Hatton Cross Station
 Heathrow Terminal 4 Station
+Heathrow Terminal 5 Station
 Heathrow Terminals 1, 2, 3 Station
 Hendon Central Station
 Heron Quays Station
@@ -550,6 +452,7 @@ Kenton Station
 Kew Gardens Station
 Kilburn Park Station
 Kilburn Station
+King George V Station
 King's Cross St. Pancras Station
 Kingsbury Station
 Knightsbridge Station
@@ -564,6 +467,7 @@ Leytonstone Station
 Limehouse Station
 Liverpool Street Station
 London Bridge Station
+London City Airport Station
 Loughton Station
 Maida Vale Station
 Manor House Station
@@ -579,8 +483,6 @@ Morden Station
 Mornington Crescent Station
 Mudchute Station
 Neasden Station
-New Cross Gate Station
-New Cross Station
 Newbury Park Station
 North Acton Station
 North Ealing Station
@@ -606,6 +508,7 @@ Piccadilly Circus Station
 Pimlico Station
 Pinner Station
 Plaistow Station
+Pontoon Dock Station
 Poplar Station
 Preston Road Station
 Prince Regent Station
@@ -621,7 +524,6 @@ Regent's Park Station
 Richmond Station
 Rickmansworth Station
 Roding Valley Station
-Rotherhithe Station
 Royal Albert Station
 Royal Oak Station
 Royal Victoria Station
@@ -657,7 +559,6 @@ Stonebridge Park Station
 Stratford Station
 Sudbury Hill Station
 Sudbury Town Station
-Surrey Quays Station
 Swiss Cottage Station
 Temple Station
 Theydon Bois Station
@@ -680,7 +581,6 @@ Vauxhall Station
 Victoria Station
 Walthamstow Central Station
 Wanstead Station
-Wapping Station
 Warren Street Station
 Warwick Avenue Station
 Waterloo Station
@@ -696,6 +596,7 @@ West Harrow Station
 West India Quay Station
 West Kensington Station
 West Ruislip Station
+West Silvertown Station
 Westbourne Park Station
 Westferry Station
 Westminster Station
@@ -706,5 +607,7 @@ Willesden Junction Station
 Wimbledon Park Station
 Wimbledon Station
 Wood Green Station
+Wood Lane Station
 Woodford Station
 Woodside Park Station
+Woolwich Arsenal Station
