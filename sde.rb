@@ -1,11 +1,11 @@
 require 'csv'
 require 'json'
 
-# collect paths of csv files
-# csv_path = 'data/Nov09JnyExample.csv'
-csv_path = 'data/Nov09JnyMediumExample.csv'
-# csv_path = 'data/Nov09JnyBigExample.csv'
-# csv_path = 'data/Nov09JnyExport.csv'
+# paths of csv files
+# csv_path = 'data/Nov09JnyExample.csv'			# 20 records
+# csv_path = 'data/Nov09JnyMediumExample.csv'	# 100 thousand records
+# csv_path = 'data/Nov09JnyBigExample.csv'		# 360 thousand records
+csv_path = 'data/Nov09JnyExport.csv'			# 2.6 million records - the real thing
 
 # define function to handle journey data insertion
 def insert_journey(station, day, time, direction) 
@@ -71,7 +71,7 @@ json_dump = $stations.to_json
 
 # write json to file
 puts "Saving JSON file..."
-File.open('stations.json', 'w') do |f|
+File.open('export/stations.json', 'w') do |f|
   f.puts json_dump
 end
 

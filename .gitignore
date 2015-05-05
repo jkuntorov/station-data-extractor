@@ -3,3 +3,9 @@
 
 # ignore all json files
 *.json
+
+# ignore all xml files
+*.xml
+
+# explicitly allow all files in the export dir
+!export/*
