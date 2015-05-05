@@ -39,6 +39,13 @@ def insert_journey(station, day, time, direction)
 
 end
 
+# prepare hash of stations that need to be merged
+$duplicates = {}
+excess_csv = CSV.foreach("data/merge_stations.csv", {headers: true}) do |stn|
+	puts "The station #{stn['excess_station']} will be merged into #{stn['merge_into']}..."
+	$duplicates[stn['excess_station']] = stn['merge_into']
+end
+
 # define an empty data object
 $stations = [];
 
@@ -52,6 +59,16 @@ csv = CSV.foreach(csv_path, {headers: true}) do |r|
 	start_time = r["EntTimeHHMM"][0..1]
 	exit_stn = r["EndStation"]
 	exit_time = r["EXTimeHHMM"][0..1]
+
+	# check if start station needs to be merged
+	if $duplicates[start_stn] then
+		start_stn = $duplicates[start_stn]
+	end
+
+	# check if end station needs to be merged
+	if $duplicates[exit_stn] then
+		exit_stn = $duplicates[exit_stn]
+	end
 
 	# do some validations on the data,
 	# if not valid - skip this journey
@@ -83,7 +100,7 @@ json_dump = $stations.to_json
 # write json to file
 puts "Saving JSON file..."
 File.open('export/journeys.json', 'w') do |f|
-  f.puts json_dump
+	f.puts json_dump
 end
 
 puts "JSON has been exported."
