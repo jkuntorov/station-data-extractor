@@ -21,7 +21,7 @@ journeys.sort!
 locations.sort!
 
 puts "Starting to write in a file..."
-File.open('export/compare.txt', 'w') do |f|
+File.open('export/comparison.txt', 'w') do |f|
   f.puts "JOURNEYS"
   f.puts journeys
   f.puts "\n"

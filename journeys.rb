@@ -71,7 +71,7 @@ json_dump = $stations.to_json
 
 # write json to file
 puts "Saving JSON file..."
-File.open('export/stations.json', 'w') do |f|
+File.open('export/journeys.json', 'w') do |f|
   f.puts json_dump
 end
 
