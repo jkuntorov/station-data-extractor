@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'nokogiri'
+require 'csv'
 require 'json'
 
 # fetch the station location data from TfL and create an XML document
@@ -30,6 +31,12 @@ doc.css('Placemark').each do |placemark|
 		# insert data about the station in the data object
 		stations[name] = {lat: lat, lon: lon}
 	end
+end
+
+# insert information about missing stations
+missing_csv = CSV.foreach("data/missing_stations.csv", {headers: true}) do |r|
+	stations[r['name']] = {lat: r['lat'], lon: r['lon']}
+	puts "Adding additional information about #{r['name']}..."
 end
 
 # convert data to json
