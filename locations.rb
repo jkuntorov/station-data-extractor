@@ -39,6 +39,13 @@ missing_csv = CSV.foreach("data/missing_stations.csv", {headers: true}) do |r|
 	puts "Adding additional information about #{r['name']}..."
 end
 
+# remove clashing stations (old East London Line which is still listed as Tube)
+excess_csv = CSV.foreach("data/excess_stations_from_locations.csv", {headers: false}) do |stn|
+	if ( stations.reject! {|key,value| key == stn[0]} ) then
+		puts "Deleting information about #{stn[0]} (excess station)..."
+	end
+end
+
 # convert data to json
 puts "Starting conversion to JSON..."
 json_dump = stations.to_json
