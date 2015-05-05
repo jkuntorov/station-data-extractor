@@ -3,9 +3,9 @@ require 'json'
 
 # paths of csv files
 # csv_path = 'data/journeys/Nov09JnyExample.csv'		# 20 records
-csv_path = 'data/journeys/Nov09JnyMediumExample.csv'	# 100 thousand records
+# csv_path = 'data/journeys/Nov09JnyMediumExample.csv'	# 100 thousand records
 # csv_path = 'data/journeys/Nov09JnyBigExample.csv'		# 360 thousand records
-# csv_path = 'data/journeys/Nov09JnyExport.csv'			# 2.6 million records - the real thing
+csv_path = 'data/journeys/Nov09JnyExport.csv'			# 2.6 million records - the real thing
 
 # define function to handle journey data insertion
 def insert_journey(station, day, time, direction) 
