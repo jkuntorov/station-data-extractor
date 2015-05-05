@@ -1,6 +1,7 @@
 require 'csv'
 require 'json'
 
+# collect paths of csv files
 # csv_path = 'data/Nov09JnyExample.csv'
 csv_path = 'data/Nov09JnyMediumExample.csv'
 # csv_path = 'data/Nov09JnyBigExample.csv'
@@ -8,6 +9,7 @@ csv_path = 'data/Nov09JnyMediumExample.csv'
 
 # define function to handle journey data insertion
 def insert_journey(station, day, time, direction) 
+
 	# create station if it doesn't exist
 	unless $stations.any? { |el| el[:name] == station } then
 		$stations << {name: station, data: {}}
@@ -34,6 +36,7 @@ def insert_journey(station, day, time, direction)
 	# insert the actual data for the journey
 	stn[:data][day][time][:all] += 1
 	stn[:data][day][time][direction] += 1
+
 end
 
 # define an empty data object
@@ -41,7 +44,7 @@ $stations = [];
 
 # open the csv and iterate through the records
 csv = CSV.foreach(csv_path, {headers: true}) do |r|
-	
+
 	# collect all the necessary data in temp vars
 	transport_type = r["SubSystem"]
 	day = r["daytype"]
@@ -55,7 +58,7 @@ csv = CSV.foreach(csv_path, {headers: true}) do |r|
 	next if start_stn == "Unstarted"
 	next if exit_stn == "Unfinished"
 
-	puts "Journey on #{day} from #{start_stn} to #{exit_stn} (#{start_time} - #{exit_time})."
+	puts "#{$.} Journey on #{day} from #{start_stn} to #{exit_stn} (#{start_time} - #{exit_time})."
 
 	insert_journey(start_stn, day, start_time, :in)
 	insert_journey(exit_stn, day, exit_time, :out)
@@ -63,12 +66,13 @@ csv = CSV.foreach(csv_path, {headers: true}) do |r|
 end
 
 # convert data to json
+puts "Starting conversion to JSON..."
 json_dump = $stations.to_json
 
 # write json to file
+puts "Saving JSON file..."
 File.open('stations.json', 'w') do |f|
   f.puts json_dump
 end
 
-# output to console
-puts json_dump
+puts "JSON has been exported."
