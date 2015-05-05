@@ -2,10 +2,10 @@ require 'csv'
 require 'json'
 
 # paths of csv files
-# csv_path = 'data/Nov09JnyExample.csv'			# 20 records
-# csv_path = 'data/Nov09JnyMediumExample.csv'	# 100 thousand records
-# csv_path = 'data/Nov09JnyBigExample.csv'		# 360 thousand records
-csv_path = 'data/Nov09JnyExport.csv'			# 2.6 million records - the real thing
+# csv_path = 'data/journeys/Nov09JnyExample.csv'		# 20 records
+csv_path = 'data/journeys/Nov09JnyMediumExample.csv'	# 100 thousand records
+# csv_path = 'data/journeys/Nov09JnyBigExample.csv'		# 360 thousand records
+# csv_path = 'data/journeys/Nov09JnyExport.csv'			# 2.6 million records - the real thing
 
 # define function to handle journey data insertion
 def insert_journey(station, day, time, direction) 
@@ -53,16 +53,27 @@ csv = CSV.foreach(csv_path, {headers: true}) do |r|
 	exit_stn = r["EndStation"]
 	exit_time = r["EXTimeHHMM"][0..1]
 
-	# do some validations on the data
+	# do some validations on the data,
+	# if not valid - skip this journey
 	next unless transport_type.include? "LUL"
 	next if start_stn == "Unstarted"
 	next if exit_stn == "Unfinished"
+	next if start_stn == "Not Applicable" || exit_stn == "Not Applicable"
 
-	puts "#{$.} Journey on #{day} from #{start_stn} to #{exit_stn} (#{start_time} - #{exit_time})."
-
+	# insert journeys
 	insert_journey(start_stn, day, start_time, :in)
 	insert_journey(exit_stn, day, exit_time, :out)
 
+	# show it's alive
+	puts "#{$.} Journey on #{day} from #{start_stn} to #{exit_stn} (#{start_time} - #{exit_time})."
+
+end
+
+# remove excess stations (National Rail, Overground, etc)
+excess_csv = CSV.foreach("data/excess_stations_from_journeys.csv", {headers: false}) do |stn|
+	if ( $stations.reject! {|element| element[:name] == stn[0]} ) then
+		puts "Deleting information about #{stn[0]} (excess station)..."
+	end
 end
 
 # convert data to json
