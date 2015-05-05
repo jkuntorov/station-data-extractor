@@ -1,6 +1,8 @@
-destination,source
-Canary Wharf,Canary Wharf DLR;Canary Wharf E2
-Kings Cross,Kings Cross M;Kings Cross T
-Liverpool Street,Liverpool St WAGN TOC Gates
-Paddington,Paddington FGW
-Waterloo,Waterloo JLE
+excess_station,merge_into
+Canary Wharf DLR,Canary Wharf
+Canary Wharf E2,Canary Wharf
+Kings Cross T,Kings Cross
+Kings Cross M,Kings Cross
+Liverpool St WAGN TOC Gates,Liverpool Street
+Paddington FGW,Paddington
+Waterloo JLE,Waterloo
