@@ -1,15 +1,15 @@
 require 'csv'
 require 'json'
 
-csv_path = 'data/Nov09JnyExample.csv'
-# csv_path = 'data/Nov09JnyBigExample.csv'
+# csv_path = 'data/Nov09JnyExample.csv'
+csv_path = 'data/Nov09JnyBigExample.csv'
 # csv_path = 'data/Nov09JnyExport.csv'
 
 # open the csv
 csv = CSV.read(csv_path, {headers: true})
 
 # define function to handle journey data insertion
-def insert_journey(station, day, time) 
+def insert_journey(station, day, time, direction) 
 	# create station if it doesn't exist
 	unless $stations.any? { |el| el[:name] == station } then
 		$stations << {name: station, data: {}}
@@ -30,11 +30,12 @@ def insert_journey(station, day, time)
 	# create time if it doesn't exist
 	# start time for start station !!!
 	if stn[:data][day][time].nil?
-		stn[:data][day][time] = {in: 0, out: 0}
+		stn[:data][day][time] = {in: 0, out: 0, all: 0}
 	end
 
 	# insert the actual data for the journey
-	stn[:data][day][time][:in] += 1
+	stn[:data][day][time][:all] += 1
+	stn[:data][day][time][direction] += 1
 end
 
 # iterate through the csv and build up the data
@@ -51,8 +52,10 @@ csv.each do |r|
 	# do some validations on the data
 	next unless transport_type.include? "LUL"
 
-	insert_journey(start_stn, day, start_time)
-	insert_journey(exit_stn, day, exit_time)
+	puts "Computing a journey from #{start_stn} to #{exit_stn}."
+
+	insert_journey(start_stn, day, start_time, :in)
+	insert_journey(exit_stn, day, exit_time, :out)
 
 end
 
@@ -60,7 +63,7 @@ end
 json_dump = $stations.to_json
 
 # write json to file
-File.open('file_json_complete.json', 'w') do |f|
+File.open('stations.json', 'w') do |f|
   f.puts json_dump
 end
 
