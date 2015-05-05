@@ -1,5 +1,5 @@
-# ignore all csv files
-*.csv
+# ignore all csv journey files
+data/journeys/*.csv
 
 # ignore all json files
 *.json
@@ -9,6 +9,3 @@
 
 # explicitly allow all files in the export dir
 !export/*
-
-# explicitly allow data for missing stations
-!data/missing_stations.csv
