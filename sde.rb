@@ -6,9 +6,6 @@ csv_path = 'data/Nov09JnyMediumExample.csv'
 # csv_path = 'data/Nov09JnyBigExample.csv'
 # csv_path = 'data/Nov09JnyExport.csv'
 
-# open the csv
-csv = CSV.read(csv_path, {headers: true})
-
 # define function to handle journey data insertion
 def insert_journey(station, day, time, direction) 
 	# create station if it doesn't exist
@@ -39,9 +36,12 @@ def insert_journey(station, day, time, direction)
 	stn[:data][day][time][direction] += 1
 end
 
-# iterate through the csv and build up the data
+# define an empty data object
 $stations = [];
-csv.each do |r|
+
+# open the csv and iterate through the records
+csv = CSV.foreach(csv_path, {headers: true}) do |r|
+	
 	# collect all the necessary data in temp vars
 	transport_type = r["SubSystem"]
 	day = r["daytype"]
