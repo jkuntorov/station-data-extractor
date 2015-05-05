@@ -9,7 +9,7 @@ doc = Nokogiri::XML(open(url))
 puts "Document opened..."
 
 # define data object
-stations = {}
+$stations = {}
 
 doc.css('Placemark').each do |placemark|
 	# extract raw name & coordinate strings for the current station
@@ -29,26 +29,26 @@ doc.css('Placemark').each do |placemark|
 		(lon,lat,elevation) = coordinates.split(',')
 
 		# insert data about the station in the data object
-		stations[name] = {lat: lat, lon: lon}
+		$stations[name] = {lat: lat, lon: lon}
 	end
 end
 
-# insert information about missing stations
+# insert information about missing $stations
 missing_csv = CSV.foreach("data/missing_stations.csv", {headers: true}) do |r|
-	stations[r['name']] = {lat: r['lat'], lon: r['lon']}
+	$stations[r['name']] = {lat: r['lat'], lon: r['lon']}
 	puts "Adding additional information about #{r['name']}..."
 end
 
-# remove excess stations (old East London Line which is still listed as Tube)
+# remove excess $stations (old East London Line which is still listed as Tube)
 excess_csv = CSV.foreach("data/excess_stations_from_locations.csv", {headers: false}) do |stn|
-	if ( stations.reject! {|key,value| key == stn[0]} ) then
+	if ( $stations.reject! {|key,value| key == stn[0]} ) then
 		puts "Deleting information about #{stn[0]} (excess station)..."
 	end
 end
 
 # convert data to json
 puts "Starting conversion to JSON..."
-json_dump = stations.to_json
+json_dump = $stations.to_json
 
 # write json to file
 puts "Saving JSON file..."
