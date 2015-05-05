@@ -2,7 +2,8 @@ require 'csv'
 require 'json'
 
 # csv_path = 'data/Nov09JnyExample.csv'
-csv_path = 'data/Nov09JnyBigExample.csv'
+csv_path = 'data/Nov09JnyMediumExample.csv'
+# csv_path = 'data/Nov09JnyBigExample.csv'
 # csv_path = 'data/Nov09JnyExport.csv'
 
 # open the csv
@@ -24,12 +25,12 @@ def insert_journey(station, day, time, direction)
 	
 	# create day if it doesn't exist
 	unless stn[:data].has_key? day then
-		stn[:data][day] = Array.new(24)
+		stn[:data][day] = {}
 	end
 
 	# create time if it doesn't exist
 	# start time for start station !!!
-	if stn[:data][day][time].nil?
+	unless stn[:data][day].has_key? time then
 		stn[:data][day][time] = {in: 0, out: 0, all: 0}
 	end
 
@@ -45,14 +46,16 @@ csv.each do |r|
 	transport_type = r["SubSystem"]
 	day = r["daytype"]
 	start_stn = r["StartStn"]
-	start_time = r["EntTimeHHMM"][0..1].to_i
+	start_time = r["EntTimeHHMM"][0..1]
 	exit_stn = r["EndStation"]
-	exit_time = r["EXTimeHHMM"][0..1].to_i
+	exit_time = r["EXTimeHHMM"][0..1]
 
 	# do some validations on the data
 	next unless transport_type.include? "LUL"
+	next if start_stn == "Unstarted"
+	next if exit_stn == "Unfinished"
 
-	puts "Computing a journey from #{start_stn} to #{exit_stn}."
+	puts "Journey on #{day} from #{start_stn} to #{exit_stn} (#{start_time} - #{exit_time})."
 
 	insert_journey(start_stn, day, start_time, :in)
 	insert_journey(exit_stn, day, exit_time, :out)
