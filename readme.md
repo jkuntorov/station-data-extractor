@@ -116,4 +116,8 @@ If you're running an OSX install, here's how you can run this project:
 ## About this project
 This repository contains the first part of my Final Major Project at Camberwell College of Arts, University of the Arts London. The data extracted here will be used for a data visualisation of Tube usage. A link to that repository will be put here, once it's ready.
 
+If you have any questions, you can get in touch via [my website](http://kuntorov.com) or @jkuntorov.
+
 I am in no way affiliated with Transport for London or any of its subsidiaries or partners.
+
+This project is open source and is licensed under the MIT license. For more information, see the `license.md` file.
