@@ -9,3 +9,6 @@ data/journeys/*.csv
 
 # explicitly allow all files in the export dir
 !export/*
+
+# mac os temp files
+.DS_Store
