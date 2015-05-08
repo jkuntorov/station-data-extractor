@@ -115,8 +115,6 @@ Harlesden
 Harrow On The Hill
 Harrow Wealdstone
 Hatton Cross
-Hayes & Harlington
-Headstone Lane
 Heathrow Term 4
 Heathrow Term 5
 Heathrow Terms 123
@@ -217,7 +215,6 @@ Regents Park
 Richmond
 Rickmansworth
 Roding Valley
-Romford
 Royal Albert
 Royal Oak
 Royal Victoria
