@@ -48,19 +48,15 @@ journeys.each_with_index do |j,ji|
 	end
 end
 
-File.open('export/matches.txt', 'w') do |f|
+matches.each do |key, value|
+	puts "#{journeys[key]["name"]} => #{locations[value][0]}"
 
-	matches.each do |key, value|
-		puts "#{journeys[key]["name"]} => #{locations[value][0]}"
-
-		# MAKE THE BIG MERGE
-		journeys[key]["name"] = locations[value][0]
-		journeys[key]["coordinates"] = locations[value][1]
-	end
-	
-	f.puts "All: #{matches.count}"
-	puts "All: #{matches.count}"
+	# MAKE THE BIG MERGE
+	journeys[key]["name"] = locations[value][0]
+	journeys[key]["coordinates"] = locations[value][1]
 end
+
+puts "All: #{matches.count}"
 
 File.open('export/data.json', 'w') do |f|
 	f.puts journeys
