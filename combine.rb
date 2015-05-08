@@ -59,5 +59,5 @@ end
 puts "All: #{matches.count}"
 
 File.open('export/data.json', 'w') do |f|
-	f.puts journeys
+	f.puts journeys.to_json
 end
