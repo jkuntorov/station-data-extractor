@@ -76,6 +76,7 @@ csv = CSV.foreach(csv_path, {headers: true}) do |r|
 	next if start_stn == "Unstarted"
 	next if exit_stn == "Unfinished"
 	next if start_stn == "Not Applicable" || exit_stn == "Not Applicable"
+	next if start_time == '25' || exit_time == '25'
 
 	# insert journeys
 	insert_journey(start_stn, day, start_time, :in)
