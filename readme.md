@@ -114,7 +114,7 @@ If you're running an OSX install, here's how you can run this project:
 - At this point you can review the `data.json` file in the `export` directory, which is ready for use.
 
 ## About this project
-This repository contains the first part of my Final Major Project at Camberwell College of Arts, University of the Arts London. The data extracted here will be used for a data visualisation of Tube usage. A link to that repository will be put here, once it's ready.
+This repository contains the first part of my Final Major Project at Camberwell College of Arts, University of the Arts London. The data extracted here will be used for a [data visualisation of Tube usage](http://kuntorov.com/tube) (also check out the [GitHub repository](https://github.com/jkuntorov/tube-usage)).
 
 If you have any questions, you can get in touch via [my website](http://kuntorov.com) or @jkuntorov.
 
